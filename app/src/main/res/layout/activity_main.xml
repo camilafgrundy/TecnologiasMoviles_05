@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F6FF"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Catálogo de Blusas"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#2D1B4E"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/txtSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona un producto y agrega su detalle"
+        android:textSize="14sp"
+        android:textColor="#6E5E8A"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="20dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar producto"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#2D1B4E"
+                android:layout_marginBottom="12dp" />
+
+            <Spinner
+                android:id="@+id/spProducto"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:drawable/editbox_background"
+                android:padding="8dp" />
+
+            <EditText
+                android:id="@+id/etCantidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Cantidad"
+                android:inputType="number"
+                android:textColor="#000000"
+                android:textColorHint="#8A8A8A"
+                android:backgroundTint="#7E57C2" />
+
+            <EditText
+                android:id="@+id/etPrecio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Precio"
+                android:inputType="numberDecimal"
+                android:textColor="#000000"
+                android:textColorHint="#8A8A8A"
+                android:backgroundTint="#7E57C2" />
+
+            <Button
+                android:id="@+id/btnAgregar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:backgroundTint="#7E57C2"
+                android:text="Agregar producto"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Productos agregados"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#2D1B4E"
+        android:layout_marginBottom="10dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerProductos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
